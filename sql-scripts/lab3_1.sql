@@ -32,6 +32,7 @@ CREATE TABLE storage (
                          updated_at timestamp DEFAULT CURRENT_TIMESTAMP
 );
 
+
 CREATE TABLE customer (
                           id SERIAL PRIMARY KEY ,
                           first_name VARCHAR(100) NOT NULL ,
