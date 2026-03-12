@@ -238,3 +238,16 @@ DROP TABLE IF EXISTS librarian;
 DROP TABLE IF EXISTS author;
     
 DROP DATABASE IF EXISTS library;
+
+
+INSERT INTO fine(reason, sanction, fine_date, is_valid, note)
+VALUES ('Просрочка возврата', 'Запрет на выдачу', '2025-01-01', true, '...');
+
+UPDATE fine
+SET sanction = 'Предупреждение'
+WHERE id = 2;
+
+ALTER TABLE fine
+    DROP COLUMN note;
+
+DELETE FROM fine WHERE id = 1;
